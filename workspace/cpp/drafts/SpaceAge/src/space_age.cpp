@@ -19,51 +19,57 @@ static planets_op planets_lt [] = {
 	"Neptune", 164.79132
 };
 namespace space_age {
-	SpaceAge::SpaceAge() {
+	space_age::space_age() {
 		
 	}
-	SpaceAge::SpaceAge(int seconds) {
+	space_age::space_age(int seconds) {
 		this->age_sec = seconds;
 	}
-	SpaceAge::~SpaceAge() {
+	space_age::~space_age() {
 	}
 
-	double SpaceAge::age_calc(std::string planet) {
+	double space_age::age_calc(std::string planet) {
 
 		size_t lt_size = sizeof(planets_lt)/sizeof(planets_lt[0]);
 		float op = 0;
 
-		for (int i = 0; i < (int)lt_size; i++) {
-			if (planets_lt[i].planet == planet) {
-				op = planets_lt[i].earth_years;
+		// for (int i = 0; i < (int)lt_size; i++) {
+		// 	if (planets_lt[i].planet == planet) {
+		// 		op = planets_lt[i].earth_years;
+		// 	}
+		// }
+		
+		for (auto& planet_op : planets_lt) {
+			if (planet_op.planet == planet) {
+				op = planet_op.earth_years;
 			}
 		}
-		
+
 		return age_sec/(earth_reference * op);
 	}
 
-	double SpaceAge::on_mercury() {
-		return SpaceAge::age_calc("Mercury");
+	double space_age::on_mercury() {
+		return space_age::age_calc("Mercury");
 	}
-	double SpaceAge::on_venus() {
-		return SpaceAge::age_calc("Venus");
+	double space_age::on_venus() {
+		return space_age::age_calc("Venus");
 	}
-	double SpaceAge::on_earth() {
-		return SpaceAge::age_calc("Earth");
+	double space_age::on_earth() {
+		return space_age::age_calc("Earth");
 	}
-	double SpaceAge::on_mars() {
-		return SpaceAge::age_calc("Mars");
+	double space_age::on_mars() {
+		return space_age::age_calc("Mars");
 	}
-	double SpaceAge::on_jupiter() {
-		return SpaceAge::age_calc("Jupiter");
+	double space_age::on_jupiter() {
+		return space_age::age_calc("Jupiter");
 	}
-	double SpaceAge::on_saturn() {
-		return SpaceAge::age_calc("Saturn");
+	double space_age::on_saturn() {
+		return space_age::age_calc("Saturn");
 	}
-	double SpaceAge::on_uranus() {
-		return SpaceAge::age_calc("Uranus");
+	double space_age::on_uranus() {
+		return space_age::age_calc("Uranus");
 	}
-	double SpaceAge::on_neptune() {
-		return SpaceAge::age_calc("Neptune");
+	double space_age::on_neptune() {
+		return space_age::age_calc("Neptune");
 	}
 }

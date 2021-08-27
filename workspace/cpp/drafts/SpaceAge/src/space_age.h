@@ -1,7 +1,7 @@
 #pragma once
 
 namespace space_age {
-    class SpaceAge
+    class space_age
     {
         private:
             /* calc age */
@@ -10,9 +10,9 @@ namespace space_age {
             const double earth_reference = 31557600; // Seconds
             double age_sec;
         public:
-            SpaceAge();
-            SpaceAge(int seconds);
-            ~SpaceAge();
+            space_age();
+            space_age(int seconds);
+            ~space_age();
 
             double on_mercury();
             double on_venus();
