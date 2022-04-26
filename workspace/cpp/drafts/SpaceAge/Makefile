@@ -18,7 +18,8 @@ CC=g++
 # Flags for compiler
 CC_FLAGS=-c         \
          -W         \
-         -Wall      
+         -Wall      \
+		 -std=c++17
 #         -ansi      \
 #         -pedantic
  

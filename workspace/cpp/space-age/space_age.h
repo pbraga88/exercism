@@ -3,23 +3,20 @@
 
 #include <string>
 #include <cstdint>
+#include <string_view>
 
 namespace space_age {
     class space_age
     {
         private:
-            /* calc age */
-            double age_calc(std::string planet) const;
-            /* data */
-             int64_t age_sec = 0;
+            double age_calc(const std::string &planet) const;
+            int64_t age_sec;
         public:
-            space_age();
-            space_age(int64_t seconds);
-
+            explicit space_age(int64_t seconds):age_sec(seconds){};
             int64_t seconds() const;
 
             double on_mercury() const;
-            double on_venus() const;
+            double on_venus () const;
             double on_earth() const;
             double on_mars() const;
             double on_jupiter() const;
