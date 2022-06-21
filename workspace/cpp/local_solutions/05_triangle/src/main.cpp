@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 #include <ctype.h>
 
 #include "triangle.h"
@@ -9,9 +10,11 @@
 
 int main(int argc, char **argv) {
     (void)argc;
-    (void)argv;
-    triangle::flavor type = triangle::kind(2,2,3);
-    std::cout<<static_cast<int>(type)<<std::endl;
+    // (void)argv;
+    double s1{atof(argv[1])}, s2{atof(argv[2])}, s3{atof(argv[3])};
+
+    triangle::flavor type = triangle::kind(s1,s2,s3);
+    std::cout<<"type: "<<static_cast<int>(type)<<std::endl;
 
     switch (type)
     {
@@ -27,7 +30,6 @@ int main(int argc, char **argv) {
     default:
         break;
     }
-
 
     return 0;
 }

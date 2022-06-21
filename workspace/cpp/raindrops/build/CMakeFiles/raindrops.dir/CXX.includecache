@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/raindrops/raindrops.cpp
+unordered_map
+-
+iostream
+-
+raindrops.h
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/raindrops/raindrops.h
+
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/raindrops/raindrops.h
+string
+-
+

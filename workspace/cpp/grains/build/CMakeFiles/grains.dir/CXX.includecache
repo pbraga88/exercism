@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/grains/grains.cpp
+iostream
+-
+grains.h
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/grains/grains.h
+
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/grains/grains.h
+stdint.h
+-
+

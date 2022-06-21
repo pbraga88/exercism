@@ -1,5 +1,5 @@
 #include <iostream>
-#include <ctype.h>
+#include <cstdint>
 
 #include "grains.h"
 
@@ -9,15 +9,21 @@
 
 int main(int argc, char **argv) {
     (void)argc;
-    (void)argv;
+    // (void)argv;
 
-    int square_nb {64};
-    int given_square {2};
+    int given_square {atoi(argv[1])};
 
-    uint64_t total = grains::get_total_amount(square_nb, given_square);
-    std::cout<<"Total amount of grains: "<<total<<std::endl;
+    uint64_t square = grains::square(given_square);
+    std::cout<<"Total on square "<<given_square<<": "<<square<<std::endl;
+    
+    // uint64_t square = grains::square(1);
+    // std::cout<<"Total on square "<<1<<": "<<square<<std::endl;
+    // square = grains::square(2);
+    // std::cout<<"Total on square "<<2<<": "<<square<<std::endl;
+    // square = grains::square(3);
+    // std::cout<<"Total on square "<<3<<": "<<square<<std::endl;
 
-    std::cout<<"Total on sqaure "<<given_square<<": "<<grains::get_amount_on_given_square()<<std::endl;
+    std::cout<<"Total amount of grains: "<<grains::total()<<std::endl;
 
     return 0;
 }

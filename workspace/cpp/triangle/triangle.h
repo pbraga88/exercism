@@ -2,10 +2,10 @@
 #define TRIANGLE_H
 
 namespace triangle {
-    enum class flavor {
-        equilateral,
+    enum class flavor{
+        scalene,
         isosceles,
-        scalene
+        equilateral = 3
     };
 
     flavor kind(double side_length_1, double side_length_2, double side_length_3);

@@ -1,9 +1,11 @@
 #if !defined(GRAINS_H)
 #define GRAINS_H
+#include <stdint.h>
 
 namespace grains {
-    int initial_amount {1}; 
-    uint64_t get_total_amount(int square_nb, uint64_t amount = initial_amount);
+    uint64_t square(int given_square);
+
+    uint64_t total();
 
 }  // namespace grains
 
