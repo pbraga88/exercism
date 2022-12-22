@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/collatz-conjecture/collatz_conjecture.cpp
+stdexcept
+-
+collatz_conjecture.h
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/collatz-conjecture/collatz_conjecture.h
+
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/collatz-conjecture/collatz_conjecture.h
+
