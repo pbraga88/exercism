@@ -4,18 +4,14 @@
 
 namespace difference_of_squares {
     double square_of_sum (int n) {
-        double sum {0};
-        for (int i = 1; i <= n; i++) {
-            sum += i;
-        }
+        /* sum from 1 to n = (n*(n + 1))/2 */
+        double sum = (n*(n+1))/2;
         return pow(sum,2);
     }
 
     double sum_of_squares(int n) {
-        double sum {0};
-        for (int i = 1; i <= n; i++) {
-            sum += pow(i,2);
-        }
+        /* Sum of squares of number from 1 to n = (n*(n+1) * ((n*2)+1))/6 */
+        double sum = (n*(n+1) * ((n*2)+1))/6;
         return sum;
     }
 
