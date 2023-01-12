@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
         std::cout<<"This app requires 1 argument"<<std::endl;
     }
     
-    std::cout<<"The nth number is: "<<nth_prime::nth_prime_number(atoi(argv[1]))<<std::endl;
+    std::cout<<"The nth number is: "<<nth_prime::nth(atoi(argv[1]))<<std::endl;
     // nth_prime::nth_prime_number(atoi(argv[1]));
 
     return 0;

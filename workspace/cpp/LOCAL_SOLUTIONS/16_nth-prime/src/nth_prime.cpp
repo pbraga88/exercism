@@ -36,12 +36,14 @@ namespace nth_prime {
     int nth(int n) {
         int nth {0};
         for (int i = 2; nth<n; i++) {
+            i = (!i&1 && i>2) ? i+1 : i;
             if(is_prime(i)) {
                 nth+=1;
                 if(nth==n) {
                     return i;
                 }
             }
+            
         }
         return -1;
     }
