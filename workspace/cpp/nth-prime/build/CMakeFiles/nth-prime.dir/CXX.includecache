@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/nth-prime/nth_prime.cpp
+iostream
+-
+stdexcept
+-
+nth_prime.h
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/nth-prime/nth_prime.h
+
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/nth-prime/nth_prime.h
+
