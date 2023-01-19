@@ -31,10 +31,14 @@ namespace nth_prime {
             throw std::domain_error("Input value must be >= 1");
         }
         
-        int nth {0};
-        for (int i = 2; nth<n; i++) {
-            if(is_prime(i)) {
-                nth+=1;
+        if (n==1) {
+            return 2;
+        }
+        
+        int nth {1};
+        for (int i = 3; nth<n; i++) {
+            if (i&1){
+                nth = is_prime(i) ? nth+1 : nth;
                 if(nth==n) {
                     return i;
                 }
