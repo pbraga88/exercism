@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/sieve/sieve.cpp
+sieve.h
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/sieve/sieve.h
+
+/home/pbraga/Workspace/Pessoal/Repositories/Exercism/exercism/workspace/cpp/sieve/sieve.h
+vector
+-
+

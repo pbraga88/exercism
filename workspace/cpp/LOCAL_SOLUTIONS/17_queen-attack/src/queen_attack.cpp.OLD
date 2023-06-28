@@ -1,0 +1,73 @@
+#include "queen_attack.h"
+#include <vector>
+#include <string_view>
+
+namespace queen_attack {
+    void print_board(std::vector<std::vector<int>> chess_board) {
+        for (size_t i = 0; i<chess_board.size(); i++){
+            for (size_t j = 0; j < chess_board.size(); j++) {
+                std::cout<<chess_board[i][j]<<' ';
+            }
+            std::cout<<std::endl;
+        }
+    }
+
+    bool q_attack(std::string_view posA, std::string_view posB) {
+        // 8x8 Chess Board filled with 0;
+        std::vector<std::vector<int>> chess_board(8, std::vector<int>(8,0));
+        // std::cout<<chess_board.size()<<std::endl;
+
+        int vert = posA[0] - ('a');
+        int horiz = posA[1] - ('0' + 1);
+        
+        std::cout<<vert<<std::endl;
+        std::cout<<horiz<<std::endl;
+        //init chess board with posA
+        chess_board[horiz][vert] = 5;
+        /*Fill Horizontal/Vertical*/
+        for (int j = 1;
+            (j <= (7-vert) || j<=(vert)) || (j <= (7-horiz) || j<=(horiz));
+            j++) {
+            // Fill Horizontal
+            if (j <= (7-vert)) {
+                chess_board[horiz][vert+j] = 1;
+            }
+            if (j<=(vert)) {
+                chess_board[horiz][vert-j] = 1;
+            }
+            // Fill Vertical
+            if (j <= (7-horiz)) {
+                chess_board[horiz+j][vert] = 1;
+            }
+            if (j<=(horiz)) {
+                chess_board[horiz-j][vert] = 1;
+            }
+        }
+
+        // Fill Diagonal
+        for (int j=1; 
+            (j<=(7-vert)&&(j<=7-horiz)) || (j<=vert && j<=horiz) ||
+            (j<=(7-vert) && j<=horiz) || (j<=vert && j<=(7-horiz));
+            j++) {
+            if (j<=(7-vert)&&(j<=7-horiz)) {
+                chess_board[horiz+j][vert+j] = 1;
+            }
+            if (j<=vert && j<=horiz) {
+                chess_board[horiz-j][vert-j] = 1;
+            }
+            if (j<=(7-vert) && j<=horiz) {
+                chess_board[horiz-j][vert+j] = 1;
+            }
+            if (j<=vert && j<=(7-horiz)) {
+                chess_board[horiz+j][vert-j] = 1;
+            }
+        }
+        print_board(chess_board);
+
+        int vertB = posB[0] - ('a');
+        int horizB = posB[1] - ('0' + 1);
+
+        return chess_board[horizB][vertB];
+        // return true;
+    }
+}  // namespace queen_attack
