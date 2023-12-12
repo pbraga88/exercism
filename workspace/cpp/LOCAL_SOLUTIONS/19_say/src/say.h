@@ -3,7 +3,7 @@
 #include <string>
 
 namespace say {
-    std::string in_english(long int number);
+    std::string in_english(long long number);
 }  // namespace say
 
 #endif // SAY_H
