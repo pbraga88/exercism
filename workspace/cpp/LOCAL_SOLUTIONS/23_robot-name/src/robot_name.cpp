@@ -8,18 +8,18 @@ namespace {
     const unsigned int MAX_COUNT = 676'000;
     unsigned int name_index = 0;
     std::vector<std::string> names = []() {
-        std::vector<std::string> names{};
-        names.reserve(MAX_COUNT);
+        std::vector<std::string> names_matrix{};
+        names_matrix.reserve(MAX_COUNT);
         for (unsigned char first = 'A'; first <= 'Z'; first++)
             for (unsigned char second = 'A'; second <= 'Z'; second++)
                 for (unsigned int num = 0; num < 1'000; num++) {
                     char buf[6]{};
                     std::snprintf(buf, sizeof(buf), "%c%c%03u", first, second, num);
-                    names.emplace_back(buf);
+                    names_matrix.emplace_back(buf);
                 }
         unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-        std::shuffle(names.begin(), names.end(), std::default_random_engine(seed));
-        return names;
+        std::shuffle(names_matrix.begin(), names_matrix.end(), std::default_random_engine(seed));
+        return names_matrix;
     }();
 }
 namespace robot_name {
